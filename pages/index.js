@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import { AiOutlineEyeInvisible } from 'react-icons/ai';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -42,32 +45,48 @@ export default function Home() {
                   {/* Form start */}
                   <form className="max-w-lg mx-auto">
                     <div className="flex flex-col gap-4 p-4 md:p-8">
-                      <div>
 
+                      <div className='relative'>
                         <input name="email" className="w-full bg-gray-50 text-black border focus:ring ring-indigo-300 rounded-lg outline-none transition duration-100 px-3 py-3 placeholder-black text-xl font-semibold" placeholder='hellouser' />
+                        <div className='absolute inset-y-0 right-0 pr-3 flex items-center text-xl leading-5 text-gray-500'>
+                          <button onclick="showDropdownOptions()" class="flex flex-row justify-between w-48 px-2 py-2 text-gray-700 bg-white border-2 border-white rounded-md shadow focus:outline-none focus:border-blue-600">
+                            <span class="select-none">@heads.design</span>
+                            <MdKeyboardArrowDown className='w-6 h-6' />
+                          </button>
+                        </div>
                       </div>
 
-                      <div>
 
-                        <input name="password" className="w-full bg-gray-50 border focus:ring ring-indigo-300 rounded-lg outline-none transition duration-100 px-3 py-3 placeholder-black text-xl font-semibold" placeholder='.....' />
+
+                      <div class="relative">
+                        <input name="password" placeholder="" class="w-full bg-gray-50 border focus:ring ring-indigo-300 rounded-lg outline-none transition duration-100 px-3 py-3 placeholder-black text-xl font-semibold" />
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-xl leading-5 text-gray-500">
+                          <AiOutlineEyeInvisible />
+                        </div>
                       </div>
 
 
+                      <button className="block bg-[#0858F7] hover:bg-[#083796] active:bg-gray-600 focus-visible:ring ring-gray-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3 group relative "
+                      >
+                        Next
+                        <p className='absolute top-4 right-[200px]'><AiOutlineArrowRight /></p>
+                      </button>
+                      {/* 
                       <button className="block bg-[#0858F7] hover:bg-[#083796] active:bg-gray-600 focus-visible:ring ring-gray-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3 group"
                         style={{ clipPath: 'inset(0 0 0 0 )' }}
                       >
                         <div class="[grid-area:1/1] flex items-center justify-center h-10 w-10 transition ease-in-out group-hover:delay-300 translate-y-10 -translate-x-10 group-hover:translate-y-0 group-hover:translate-x-0 absolute left-[470px] bottom-[295px] text-[30px]">
                           &#8594;
                         </div>
-                        Next</button>
+                        Next</button> */}
 
 
 
 
                     </div>
 
-                    <div className="flex justify-center items-center bg-gray-100 p-4">
-                      <p className="text-gray-500 text-sm text-center">Don't have an account? <a href="#" className="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 transition duration-100">Register</a></p>
+                    <div className="flex justify-center items-center p-2">
+                      <p className='text-[#0858F7] font-bold'>Forgot Your Password?</p>
                     </div>
                   </form>
                   {/* Form end */}
