@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import img from '../public/DrawKit Vector Illustration Black Friday & Online Shopping (4).png'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { AiOutlineArrowRight } from 'react-icons/ai';
@@ -67,7 +68,7 @@ export default function Home() {
                       </div>
 
 
-                      <Link href={'/otp'}><button className="block bg-[#0858F7] hover:bg-[#083796] active:bg-gray-600 focus-visible:ring ring-gray-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3 group relative "
+                      <Link className="block bg-[#0858F7] hover:bg-[#083796] active:bg-gray-600 focus-visible:ring ring-gray-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3 group relative " href={'/otp'}><button
                       >
                         Next
                         <p className='absolute top-4 right-[200px]'><AiOutlineArrowRight /></p>
@@ -97,8 +98,35 @@ export default function Home() {
               {/* <!-- content - end --> */}
 
               {/* <!-- image - start --> */}
-              <div className="xl:w-5/12 h-48 lg:h-auto bg-gray-100 overflow-hidden shadow-lg rounded-lg">
-                <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Fakurian Design" className="w-full h-full object-cover object-center" />
+              <div className="xl:w-5/12 h-48 lg:h-auto bg-[#0858F7] overflow-hidden shadow-lg rounded-lg">
+                <article className="max-w-md mx-auto mt-4 rounded-md duration-300 hover:shadow-sm">
+                  <a href='/'>
+                    <Image src={img} loading="lazy" alt='card' className="w-full h-full rounded-t-md" />
+                    <div className="flex items-center mt-2 pt-3 ml-4 mr-2">
+
+                      <div className="ml-3">
+                        <span className="block text-gray-900"></span>
+                        <span className="block text-gray-400 text-sm"></span>
+                      </div>
+                    </div>
+                    <div className="pt-3 ml-4 mr-2 mb-3">
+                      <button className="bg-black text-white active:bg-zinc-600 font-bold uppercase text-md p-1 rounded-md shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"
+                      >
+                        New
+                      </button>
+                      <h3 className="text-4xl text-white font-semibold py-3">
+                        Developer handoff improvements
+                      </h3>
+                      <p className="text-white text-xl mt-1 py-2">You'll now see a highlight around Symbols on the Canvas and in the Inspector.</p>
+                      <div className="flex justify-between items-center py-5">
+                        <p className="text-6xl text-white gap-5 ">....</p>
+                        <h3 className="text-2xl text-white font-semibold">
+                          Share
+                        </h3>
+                      </div>
+                    </div>
+                  </a>
+                </article>
               </div>
               {/* <!-- image - end --> */}
             </section>
