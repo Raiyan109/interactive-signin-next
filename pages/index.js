@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { AiOutlineEyeInvisible } from 'react-icons/ai';
 import { MdKeyboardArrowDown } from 'react-icons/md';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -66,11 +67,11 @@ export default function Home() {
                       </div>
 
 
-                      <button className="block bg-[#0858F7] hover:bg-[#083796] active:bg-gray-600 focus-visible:ring ring-gray-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3 group relative "
+                      <Link href={'/otp'}><button className="block bg-[#0858F7] hover:bg-[#083796] active:bg-gray-600 focus-visible:ring ring-gray-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3 group relative "
                       >
                         Next
                         <p className='absolute top-4 right-[200px]'><AiOutlineArrowRight /></p>
-                      </button>
+                      </button></Link>
                       {/* 
                       <button className="block bg-[#0858F7] hover:bg-[#083796] active:bg-gray-600 focus-visible:ring ring-gray-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3 group"
                         style={{ clipPath: 'inset(0 0 0 0 )' }}
